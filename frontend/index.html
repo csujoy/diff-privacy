@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin & Creator Portal</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Primary navigation">
+        <div class="logo">NebulaOps</div>
+        <nav>
+          <button class="nav-btn active" data-section="admin-onboarding">Admin Onboarding</button>
+          <button class="nav-btn" data-section="admin-dashboard">Admin Dashboard</button>
+          <button class="nav-btn" data-section="admin-creators">Creators Module</button>
+          <button class="nav-btn" data-section="admin-projects">Projects &amp; Tasks</button>
+          <button class="nav-btn" data-section="admin-review">Review &amp; Submissions</button>
+          <button class="nav-btn" data-section="admin-payouts">Payouts</button>
+          <div class="divider"></div>
+          <button class="nav-btn" data-section="creator-onboarding">Creator Onboarding</button>
+          <button class="nav-btn" data-section="creator-dashboard">Creator Dashboard</button>
+          <button class="nav-btn" data-section="creator-earnings">Creator Earnings</button>
+          <div class="divider"></div>
+          <button class="nav-btn" data-section="components">Component Library</button>
+        </nav>
+        <footer class="sidebar-footer">
+          <p>Dark mode design system</p>
+        </footer>
+      </aside>
+      <main class="content" id="mainContent">
+        <header class="top-bar">
+          <div class="search-wrapper">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M13.5 13.5L17 17"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+              <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5"></circle>
+            </svg>
+            <input type="search" placeholder="Search anything..." />
+          </div>
+          <button class="theme-toggle" id="themeToggle">Glow Boost</button>
+        </header>
+
+        <section class="section active" id="admin-onboarding">
+          <div class="hero">
+            <div class="hero-content">
+              <h1>High-Fidelity Admin Onboarding</h1>
+              <p>
+                Welcome new admin teams with a cinematic onboarding journey. Guide them through organization
+                creation, team invitations, integrations, and dashboard discovery with ambient gradients and glowing
+                accents.
+              </p>
+              <div class="cta-group">
+                <button class="btn primary">Create Organization</button>
+                <button class="btn secondary">Watch Prototype</button>
+              </div>
+            </div>
+            <div class="hero-visual">
+              <div class="glow-orb"></div>
+              <div class="orb trail"></div>
+              <div class="orb"></div>
+            </div>
+          </div>
+
+          <div class="flow-grid">
+            <article class="card gradient">
+              <h2>1. Welcome</h2>
+              <p>Hero gradient backdrop, animated logo entry, glowing CTA to kick-off onboarding.</p>
+            </article>
+            <article class="card gradient">
+              <h2>2. Create Organization</h2>
+              <p>Floating card with soft shadow, rounded inputs and focused electric-blue outlines.</p>
+            </article>
+            <article class="card gradient">
+              <h2>3. Invite Team</h2>
+              <p>Pill-style role selectors with dynamic glow states for Admin, Finance, and Collaborator roles.</p>
+            </article>
+            <article class="card gradient">
+              <h2>4. Integrations</h2>
+              <p>Grid of integrations with Slack, Stripe, Email cards that pulse softly when connected.</p>
+            </article>
+            <article class="card gradient wide">
+              <h2>5. Dashboard Intro Overlay</h2>
+              <p>Gradient mask overlay highlights key dashboard zones with crisp white outline tooltips.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="admin-dashboard">
+          <h1>Admin Dashboard Overview</h1>
+          <div class="metrics-grid">
+            <div class="metric-card" data-glow="blue">
+              <span class="label">Active Creators</span>
+              <strong class="value">1,248</strong>
+              <span class="trend positive">+12% MoM</span>
+            </div>
+            <div class="metric-card" data-glow="violet">
+              <span class="label">Pending Invites</span>
+              <strong class="value">36</strong>
+              <span class="trend neutral">Stable</span>
+            </div>
+            <div class="metric-card" data-glow="green">
+              <span class="label">Successful Payouts</span>
+              <strong class="value">$182K</strong>
+              <span class="trend positive">+8% QoQ</span>
+            </div>
+            <div class="metric-card" data-glow="yellow">
+              <span class="label">Tasks In Review</span>
+              <strong class="value">58</strong>
+              <span class="trend warning">Action Needed</span>
+            </div>
+          </div>
+
+          <div class="dashboard-layout">
+            <section class="activity-feed">
+              <h2>Activity Feed</h2>
+              <ol class="timeline">
+                <li>
+                  <div class="dot"></div>
+                  <div>
+                    <h3>Creator <span class="highlight">Mika Tan</span> submitted a review.</h3>
+                    <p>Project: AI Podcast Series · 2 minutes ago</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="dot"></div>
+                  <div>
+                    <h3>Stripe payout initiated.</h3>
+                    <p>$2,400 · Finance · 12 minutes ago</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="dot"></div>
+                  <div>
+                    <h3>New integration connected: Slack workspace.</h3>
+                    <p>Org: Lumina Labs · 25 minutes ago</p>
+                  </div>
+                </li>
+              </ol>
+            </section>
+            <section class="hint-overlay">
+              <h2>Guided Intro</h2>
+              <p>Enable overlay to spotlight dashboard cards with animated hints and keyboard shortcuts.</p>
+              <button class="btn outline">Launch Guided Tour</button>
+            </section>
+          </div>
+        </section>
+
+        <section class="section" id="admin-creators">
+          <h1>Creators Module</h1>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Creator</th>
+                  <th>Status</th>
+                  <th>Specialty</th>
+                  <th>Tasks</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="avatar-ring active"></div>
+                    <div>
+                      <strong>Vera Lang</strong>
+                      <span class="muted">@veralang</span>
+                    </div>
+                  </td>
+                  <td><span class="chip live">Live</span></td>
+                  <td>Video Editing</td>
+                  <td>5</td>
+                  <td><button class="btn ghost">Open Profile</button></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="avatar-ring"></div>
+                    <div>
+                      <strong>Hassan Lee</strong>
+                      <span class="muted">@hlee</span>
+                    </div>
+                  </td>
+                  <td><span class="chip draft">Draft</span></td>
+                  <td>Podcast Production</td>
+                  <td>2</td>
+                  <td><button class="btn ghost">Open Profile</button></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="avatar-ring"></div>
+                    <div>
+                      <strong>Jules Park</strong>
+                      <span class="muted">@jpark</span>
+                    </div>
+                  </td>
+                  <td><span class="chip done">Done</span></td>
+                  <td>Copywriting</td>
+                  <td>9</td>
+                  <td><button class="btn ghost">Open Profile</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="profile-tabs">
+            <div class="tab-buttons">
+              <button class="tab active" data-tab="overview">Overview</button>
+              <button class="tab" data-tab="projects">Projects</button>
+              <button class="tab" data-tab="payouts">Payouts</button>
+            </div>
+            <div class="tab-content active" id="overview">
+              <h2>Profile Spotlight</h2>
+              <p>Hero banner with glowing avatar ring, featuring success metrics and social reach.</p>
+            </div>
+            <div class="tab-content" id="projects">
+              <h2>Project Timeline</h2>
+              <p>Stacked cards showing milestones, due dates, and role contributions.</p>
+            </div>
+            <div class="tab-content" id="payouts">
+              <h2>Payout History</h2>
+              <p>Summaries with neon-accented totals and Stripe references.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="admin-projects">
+          <h1>Projects &amp; Tasks</h1>
+          <div class="projects-grid">
+            <article class="project-card" data-status="draft">
+              <header>
+                <span>Draft</span>
+                <h2>AI Voices Launch</h2>
+              </header>
+              <p>Prep assets, finalize scripts, coordinate beta creators.</p>
+            </article>
+            <article class="project-card" data-status="live">
+              <header>
+                <span>Live</span>
+                <h2>Creator Labs Beta</h2>
+              </header>
+              <p>Active sprint with 8 creators, progress updates daily.</p>
+            </article>
+            <article class="project-card" data-status="done">
+              <header>
+                <span>Done</span>
+                <h2>Influencer Outreach</h2>
+              </header>
+              <p>Wrap-up, analytics ready for stakeholder report.</p>
+            </article>
+          </div>
+
+          <div class="task-modal-preview">
+            <div class="modal-card">
+              <h2>Create Task</h2>
+              <div class="modal-grid">
+                <label>Title<input type="text" placeholder="Podcast outline" /></label>
+                <label>Due Date<input type="date" /></label>
+                <label>Assignee<input type="text" placeholder="@creator" /></label>
+                <label>Status<select><option>Draft</option><option>Live</option><option>Done</option></select></label>
+              </div>
+              <button class="btn primary">Save Task</button>
+            </div>
+            <div class="live-dashboard">
+              <h2>Live Task Dashboard</h2>
+              <div class="progress-bar"><span style="width: 68%"></span></div>
+              <div class="mini-avatars">
+                <span title="Vera"></span>
+                <span title="Hassan"></span>
+                <span title="Jules"></span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="admin-review">
+          <h1>Review &amp; Submissions</h1>
+          <div class="review-modal">
+            <div class="review-card">
+              <h2>Submission Review</h2>
+              <p>Check deliverables with contextual notes, timeline comparisons, and version diff previews.</p>
+              <div class="btn-row">
+                <button class="btn primary">Approve</button>
+                <button class="btn warning">Request Changes</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="admin-payouts">
+          <h1>Payouts &amp; Finance</h1>
+          <div class="ledger">
+            <table>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Creator</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Aug 25</td>
+                  <td>Vera Lang</td>
+                  <td class="amount paid">$1,800</td>
+                  <td><span class="chip done">Paid</span></td>
+                </tr>
+                <tr>
+                  <td>Aug 25</td>
+                  <td>Hassan Lee</td>
+                  <td class="amount pending">$950</td>
+                  <td><span class="chip live">Processing</span></td>
+                </tr>
+                <tr>
+                  <td>Aug 24</td>
+                  <td>Jules Park</td>
+                  <td class="amount paid">$600</td>
+                  <td><span class="chip done">Paid</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="stripe-modal">
+            <div class="stripe-frame">
+              <h2>Stripe Connect</h2>
+              <p>Securely onboarded. Re-authenticate if connection expires.</p>
+              <button class="btn success">Sync Now</button>
+            </div>
+            <div class="success-glow">
+              <h3>Success Animation</h3>
+              <p>Upon payout completion, trigger a green-glow pulse animation with confetti burst.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="creator-onboarding">
+          <h1>Creator Onboarding Journey</h1>
+          <div class="journey-grid">
+            <article class="journey-card">
+              <h2>Hero Welcome</h2>
+              <p>Full-screen illustration with AI community vibes, plus glowing CTA.</p>
+            </article>
+            <article class="journey-card">
+              <h2>Profile Form</h2>
+              <p>Tag inputs appear as neon pills with remove icons.</p>
+            </article>
+            <article class="journey-card">
+              <h2>Payout Setup</h2>
+              <p>Embedded Stripe Connect dark theme with accent frame.</p>
+            </article>
+            <article class="journey-card">
+              <h2>KYC Wizard</h2>
+              <p>Step indicators glow with subtle pulsing on the active step.</p>
+            </article>
+            <article class="journey-card">
+              <h2>Contract Signing</h2>
+              <p>Signature pad with accent outline and confirmation check spark.</p>
+            </article>
+            <article class="journey-card wide">
+              <h2>Success Screen</h2>
+              <p>Confetti gradient animation celebrating completion with a centered bright CTA.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="creator-dashboard">
+          <h1>Creator Dashboard &amp; Tasks</h1>
+          <div class="creator-dashboard">
+            <div class="creator-metrics">
+              <div class="metric-card" data-glow="blue">
+                <span class="label">Active Tasks</span>
+                <strong class="value">3</strong>
+                <span class="trend positive">Due in 2 days</span>
+              </div>
+              <div class="metric-card" data-glow="green">
+                <span class="label">Earnings</span>
+                <strong class="value">$4,520</strong>
+                <span class="trend positive">+22% this month</span>
+              </div>
+              <div class="metric-card" data-glow="violet">
+                <span class="label">Completion Rate</span>
+                <strong class="value">97%</strong>
+                <span class="trend positive">Top percentile</span>
+              </div>
+            </div>
+            <div class="task-detail">
+              <h2>Current Task</h2>
+              <p>Polish AI audio mix for Episode 4. Deliver stems and transcripts.</p>
+              <button class="btn primary">Accept Task</button>
+            </div>
+            <div class="submission-form">
+              <h2>Submit Deliverable</h2>
+              <div class="drop-zone" tabindex="0">
+                <p>Drag &amp; drop files or click to browse.</p>
+              </div>
+              <button class="btn outline">Upload</button>
+            </div>
+            <div class="submission-status">
+              <h2>Status</h2>
+              <p>Awaiting Review <span class="pulse"></span></p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="creator-earnings">
+          <h1>Creator Earnings &amp; Stripe Flow</h1>
+          <div class="earnings-overview">
+            <div class="balance">$12,420.00</div>
+            <p>Track payouts with neon clarity and instant Stripe Express access.</p>
+            <div class="stripe-express">
+              <h2>Stripe Express</h2>
+              <p>Dark themed embed with accent ring and secure authentication.</p>
+              <button class="btn success">Open Stripe</button>
+            </div>
+            <div class="success-modal">
+              <h3>Success Modal</h3>
+              <p>Green glow, checkmark burst animation, and success copy.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="components">
+          <h1>Component Library</h1>
+          <div class="component-library">
+            <div>
+              <h2>Atoms</h2>
+              <ul>
+                <li>Buttons: primary, secondary, destructive, ghost.</li>
+                <li>Inputs, dropdowns, tags, toasts.</li>
+              </ul>
+            </div>
+            <div>
+              <h2>Molecules</h2>
+              <ul>
+                <li>Cards, tables, modals, tab bars, step indicators.</li>
+                <li>Progress bars, activity timelines.</li>
+              </ul>
+            </div>
+            <div>
+              <h2>Organisms</h2>
+              <ul>
+                <li>Dashboard panels, profile header, task list, onboarding wizard.</li>
+              </ul>
+            </div>
+            <div>
+              <h2>Global Styles</h2>
+              <ul>
+                <li>Color tokens, text styles, shadows, radii, animations.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
